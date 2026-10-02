@@ -48,7 +48,7 @@ except:
   fonte_turma = ImageFont.load_default()
 
 # Desenhar o Nome
-draw.text((largura_qr/2, altursa_qr + 10, nome, fill="black", font=fonte_nome,
+draw.text((largura_qr/2, altura_qr + 10, nome, fill="black", font=fonte_nome,
 anchor="mm")
 # Desenhar a Turma
 draw.text((largura_qr/2, altura_qr + 45), turma, fill="gray", font=fonte_turma,
