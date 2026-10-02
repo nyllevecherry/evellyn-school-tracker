@@ -49,6 +49,16 @@ except:
 
 # Desenhar o Nome
 draw.text((largura_qr/2, altursa_qr + 10, nome, fill="black", font=fonte_nome,
-anchor="mn")
+anchor="mm")
 # Desenhar a Turma
-draw.text((largura_qr2, altura_qr + 10), nome, fill="black", 
+draw.text((largura_qr/2, altura_qr + 45), turma, fill="gray", font=fonte_turma,
+anchor="mm")
+
+   # 5. Salvar o arquivo
+   nome_arquivo = f"{aluno['id']:02d}_{nome.replace(' ', '_')}.png"
+   cracha.save(o.path.join(PASTA_SAIDA, nome_arquivo))
+
+  print(f"\n Sucesso! {len(alunos)} crachás gerados na pasta '{PASTA_SAIDA}'.")
+
+if __name__ == "__main__":
+    gerar_crachas()
